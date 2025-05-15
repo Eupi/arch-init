@@ -39,9 +39,6 @@ echo "Configuring is done."
 echo
 
 echo "--- Get dotfiles ---"
-git clone https://github.com/Eupi/arch-init.git
-cd arch-init
-git checkout develop
 rsync -a config/ $HOME/.config/
 cp wallpapers/* $HOME/Downloads/Wallpapers/
 chmod +x .config/polybar/launch.sh
