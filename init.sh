@@ -32,9 +32,8 @@ mkdir -p $HOME/Downloads/Wallpapers
 mkdir -p $HOME/.local/share/fonts/FiraCodeNerdFont
 
 # Get fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/FiraCode.zip -P /tmp 
-unzip /tmp/FiraCode.zip -d $HOME/.local/share/fonts/FiraCodeNerdFont
-rm /tmp/FiraCode.zip
+cp fonts/feather.ttf $HOME/.local/share/fonts/
+unzip fonts/FiraCode.zip -d $HOME/.local/share/fonts/FiraCodeNerdFont
 echo "Configuring is done."
 echo
 
