@@ -15,7 +15,10 @@ sudo pacman -Syu \
 	vim \
 	wget \
 	rsync \
+	pacman-contrib \
 	--noconfirm
+
+sudo yay -S lxsession-gtk3 --noconfirm
 echo
 echo "--- Software installed ---"
 echo
@@ -29,16 +32,16 @@ echo
 
 setxkbmap -model pc105 -layout us,ru -option grp:caps_toggle
 mkdir -p $HOME/Downloads/Wallpapers
-mkdir -p $HOME/.local/share/fonts/FiraCodeNerdFont
+mkdir -p $HOME/.local/share/fonts
 
 # Get fonts
-cp fonts/feather.ttf $HOME/.local/share/fonts/
-unzip fonts/FiraCode.zip -d $HOME/.local/share/fonts/FiraCodeNerdFont
+cp fonts/.*  $HOME/.local/share/fonts/
 echo "Configuring is done."
 echo
 
 echo "--- Get dotfiles ---"
 rsync -a config/ $HOME/.config/
+cp config/.Xresources $HOME/
 cp wallpapers/* $HOME/Downloads/Wallpapers/
 chmod +x .config/polybar/launch.sh
 
