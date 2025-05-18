@@ -187,7 +187,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh --forest
 exec feh --bg-scale $HOME/Downloads/Wallpapers/wall-1.jpg
 
 # Disable titlebar for all windows
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 3
 
 # Set gaps
 gaps inner 5px
@@ -198,3 +198,15 @@ exec --no-startup-id picom --config $HOME/.config/picom/picom.conf -b
 
 # Set change keyboard layout to CspaLock
 exec setxkbmap -model pc105 -layout us,ru -option grp:caps_toggle
+
+#i3 Window Colors
+#set $bg_color #c1121f
+#set $ibg_color #FDF0D5
+#set $text_color #f00c1f
+#set $ubg_color #f00c1f
+
+# class                 border  	backgr. 	text    	indicator 	child_border
+#client.focused 		#c1121f 	#c1121f 	#c1121f 	#c1121f		 #285577
+#client.focused_inactive #c1121f 	$ibg_color 	$text_color	#484e50   	#5f676a
+#client.unfocused        #C1121F 	#C1121F 	#C1121F		#292d2e00   	#222222
+#client.urgent           $ubg_color 	$ubg_color 	$text_color	#900000   	#900000
