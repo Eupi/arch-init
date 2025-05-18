@@ -44,6 +44,7 @@ rsync -a config/ $HOME/.config/
 cp config/.Xresources $HOME/
 cp wallpapers/* $HOME/Downloads/Wallpapers/
 chmod +x .config/polybar/launch.sh
+chmod +x .config/polybar/scripts/.sh
 
 echo "--- Install apps for environment ---"
 sudo pacman -Syu \
