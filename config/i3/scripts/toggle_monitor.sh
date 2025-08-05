@@ -40,5 +40,6 @@ fi
 echo "${monitor_mode}" > /tmp/monitor_mode.dat
 
 
-# then add this command to i3 to bind the toggle
+# Set executable rights for script: 'chmod +x toggle_monitor.sh'
+# And then add this command to i3 to bind the toggle:
 # bindsym $mod+Shift+s exec --no-startup-id $HOME/.config/i3/scripts/toggle_monitor.sh
